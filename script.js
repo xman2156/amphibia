@@ -1,5 +1,5 @@
 var oneDay = 24*60*60*1000;
-	var latestRelease = new Date("2020-08-29T19:00:00-05:00"); // Estimated End of Homeworld Bound
+	var latestRelease = new Date("2020-10-17T19:00:00-05:00"); //Newest Episode Release
 	// var nextRelease = new Date("2020-08-29T19:00:00-05:00"); // Next Episode release
 	var mode = 0; //DD:HH:MM:SS mode is default
 	var lastHiatusMention = null;
@@ -18,7 +18,7 @@ var oneDay = 24*60*60*1000;
 	
 	//Initially loads the last 100 posts on subreddit
 	function requestSubredditData(after = null) {
-		var url = 'https://www.reddit.com/r/TheOwlHouse/new.json?limit=100';
+		var url = 'https://www.reddit.com/r/amphibia/new.json?limit=100';
 		GetThen(after ? url + '&after=' + after : url, checkSubreddit);
 	}
 		
@@ -113,8 +113,8 @@ var oneDay = 24*60*60*1000;
 	//The Grand Array of Hiatuses
 	var hiatusList = [
 	['Last Episode','Next Episode','Preceding Release','Date Announced','Following Release','Days In The Dark','Days Waiting','Hiatus Length','Note'],
-	['Escape of the Palisman','Sense and Insensitivity','20 Mar 2020','7 Jul 2020','11 Jul 2020',111,4,115,''],
-	['Young Blood, Old Souls','','29 Aug 2020','','',114,0,114,''],
+	['Reunion','Handy Anne','18 Jul 2019','30 Jun 2020','11 Jul 2020',348,11,359,'Break between Season 1 & 2'],
+	['A Day at the Aquarium', 'The Shut-In!','19 Sep 2020','13 Oct 2020','17 Oct 2020',24,4,28,''],
 	];
 	
 	function hiatusRankCheck(){
