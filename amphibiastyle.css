@@ -37,11 +37,11 @@ div{
 	}	
 	body {
 	background-color: black;
-	background-image: url("BackgroundImage.webp");
+	background-image: url("AmphibiaBackground.webp");
     background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	background-position: 46.8% 50%;
+	background-position: center;
     }
 	table {
     border-collapse: collapse;
