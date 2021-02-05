@@ -31,7 +31,7 @@ div {
 
 hr {
 	border: none;
-	background-color: #ffbcde;
+	background-color: #f850a1;
 	height: 5px;
 	width: 80%;
 }
@@ -46,7 +46,7 @@ hr {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 90%;
-	color: #ffbcde;
+	color: #f850a1;
 	letter-spacing: 3px;
 }
 
