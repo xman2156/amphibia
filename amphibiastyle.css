@@ -21,12 +21,12 @@
 div{
 	font-family: "Andika";
 	text-align: center;
-	color: #2ef8b5;
+	color: #22f526;
 	line-height: 1.4;
 	}
 	hr{
 	border: none;
-	background-color: #2ef8b5;
+	background-color: #22f526;
 	height: 5px;
 	width: 80%;
 	}
@@ -68,7 +68,7 @@ div{
 	td {
 	padding: 3px;
 	text-align: center;
-	border: 3px solid #2ef8b5;
+	border: 3px solid #22f526;
 	padding: 4px;
 	background-color: rgba(0,0,0,0.4);
 	}
