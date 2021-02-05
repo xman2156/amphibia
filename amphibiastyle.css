@@ -2,6 +2,7 @@
   overflow: hidden;
   background-color:#333;
 }
+
 .topnav a {
   float: left;
   display: block;
@@ -12,79 +13,94 @@
   font-size: 17px;
   border-bottom: 3px solid transparent;
 }
+
 .topnav a:hover {
   border-bottom: 3px solid #2ef8b5;
 }
+
 .topnav a.active {
   border-bottom: 3px solid #2ef8b5;
 }
-div{
+
+div {
 	font-family: "Andika";
 	text-align: center;
-	color: #22f526;
+	color: #ff1947;
 	line-height: 1.4;
-	}
-	hr{
+}
+
+hr {
 	border: none;
-	background-color: #22f526;
+	background-color: #ff1947;
 	height: 5px;
 	width: 80%;
-	}
-	.extra{
+}
+
+.extra {
 	letter-spacing: 1px;
-	}
-	.count {
+}
+
+.count {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 90%;
-	color: #22f526;
+	color: #ff1947;
 	letter-spacing: 3px;
-	}
-	.head {
+}
+
+.head {
 	font-size: 110%;
-	}
-	.tab {
+}
+
+.tab {
 	position: relative;
 	transform: translate(0%, 110%);
 	font-size: 100%;
 	width: 100%;
 	height: 100%;
-	}	
-	body {
+}	
+
+body {
 	background-color: black;
 	background-image: url("AmphibiaBackground.webp");
-    	background-repeat: no-repeat;
+  background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
-    }
-	table {
-    	border-collapse: collapse;
-	color: #27d49a;
+}
+
+table {
+  border-collapse: collapse;
+	color: #ff1947;
 	width: 95%;
-	}
-	td {
+}
+
+td {
 	padding: 3px;
 	text-align: center;
-	border: 3px solid #22f526;
+	border: 3px solid #ff1947;
 	padding: 4px;
 	background-color: rgba(0,0,0,0.4);
-	}
-	.links {
+}
+
+.links {
   text-decoration: none;
 	color: #29b7ed;
-	}
-	.links:visited {
+}
+
+.links:visited {
 	color: #fbff21;
-	}
-	.links:hover {
+}
+
+.links:hover {
 	color: hotpink;
-	}
-	@font-face {
+}
+
+@font-face {
     font-family: Andika;
     src: rel="preload" url('AndikaNewBasic-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-	}
+}
