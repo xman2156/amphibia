@@ -26,7 +26,6 @@ div {
 	font-family: "Andika";
 	text-align: center;
 	color: #3cd8ff;
-  line-height: 1.4;
 }
 
 hr {
@@ -45,7 +44,7 @@ hr {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 90%;
+	width: 100%;
 	color: #3cd8ff;
   letter-spacing: 3px;
   text-shadow: 2px 2px #000000;
@@ -57,7 +56,7 @@ hr {
 
 .tab {
 	position: relative;
-	transform: translate(0%, 110%);
+	transform: translate(0%, 90%);
 	font-size: 100%;
 	width: 100%;
   height: 100%;
@@ -71,7 +70,6 @@ hr {
 body {
 	background-color: black;
 	background-image: url("AmphibiaBackground.jpg");
-  background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
