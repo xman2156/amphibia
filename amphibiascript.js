@@ -112,10 +112,10 @@ var oneDay = 24*60*60*1000;
 	
 	//The Grand Array of Hiatuses
 	var hiatusList = [
-	['Last Episode','Next Episode','Preceding Release','Date Announced','Following Release','Days In The Dark','Days Waiting','Hiatus Length','Note'],
-	['Reunion','Handy Anne','18 Jul 2019','30 Jun 2020','11 Jul 2020',348,11,359,'Break between Season 1 & 2'],
-  ['A Day at the Aquarium', 'The Shut-In!','19 Sep 2020','13 Oct 2020','17 Oct 2020',24,4,28,''],
-  ['The Shut-In!','Night Drivers','17 Oct 2020','4 Feb 2021','6 Mar 2021',110,30,140,'']
+	  ['Last Episode','Next Episode','Preceding Release','Date Announced','Following Release','Days In The Dark','Days Waiting','Hiatus Length','Note'],
+	  ['Reunion','Handy Anne','18 Jul 2019','30 Jun 2020','11 Jul 2020',348,11,359,'Break between Season 1 & 2'],
+    ['A Day at the Aquarium', 'The Shut-In!','19 Sep 2020','13 Oct 2020','17 Oct 2020',24,4,28,''],
+    ['The Shut-In!','Night Drivers','17 Oct 2020','4 Feb 2021','6 Mar 2021',110,30,140,'']
 	];
 	
 	function hiatusRankCheck(){
