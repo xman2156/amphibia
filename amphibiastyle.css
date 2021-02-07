@@ -25,15 +25,15 @@
 div {
 	font-family: "Andika";
 	text-align: center;
-	color: #ffbcde;
-	line-height: 1.4;
+	color: #3cd8ff;
+  line-height: 1.4;
 }
 
 hr {
 	border: none;
-	background-color: #f850a1;
+	background-color: #3cd8ff;
 	height: 5px;
-	width: 80%;
+  width: 80%;
 }
 
 .extra {
@@ -46,8 +46,9 @@ hr {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 90%;
-	color: #f850a1;
-	letter-spacing: 3px;
+	color: #3cd8ff;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px #000000;
 }
 
 .head {
@@ -59,12 +60,17 @@ hr {
 	transform: translate(0%, 110%);
 	font-size: 100%;
 	width: 100%;
-	height: 100%;
+  height: 100%;
+  text-shadow: 2px 2px #000000;
 }	
+
+.reddit {
+  text-shadow: none;
+}
 
 body {
 	background-color: black;
-	background-image: url("AmphibiaBackground.webp");
+	background-image: url("AmphibiaBackground.jpg");
   background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -73,16 +79,16 @@ body {
 
 table {
   border-collapse: collapse;
-	color: #ffbcde;
-	width: 95%;
+	color: #3cd8ff;
+  width: 95%;
 }
 
 td {
 	padding: 3px;
 	text-align: center;
-	border: 3px solid #ffbcde;
+	border: 3px solid #3cd8ff;
 	padding: 4px;
-	background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.4);
 }
 
 .links {
@@ -91,11 +97,11 @@ td {
 }
 
 .links:visited {
-	color: #fbff21;
+	color: #21cbff;
 }
 
 .links:hover {
-	color: hotpink;
+	color: rgb(45, 66, 255);
 }
 
 @font-face {
