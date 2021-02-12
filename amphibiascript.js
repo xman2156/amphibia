@@ -1,10 +1,10 @@
 var oneDay = 24*60*60*1000;
-  var latestRelease = new Date("2020-10-17T19:00:00-05:00"); //Newest Episode Release
-  var countdownEnd = new Date("2021-02-04T19:00:00-05:00"); //Date Announced
+	var latestRelease = new Date("2020-10-17T19:00:00-05:00"); //Newest Episode Release
+	var countdownEnd = new Date("2021-02-04T19:00:00-05:00"); //Date Announced
 	var nextRelease = new Date("2021-03-06T19:00:00-05:00"); // Next Episode release
 	var mode = 0; //DD:HH:MM:SS mode is default
 	var lastHiatusMention = null;
-	
+
 	//voodoo magic
 	function GetThen(yourUrl, onload){
 		var Httpreq = new XMLHttpRequest();
@@ -16,13 +16,13 @@ var oneDay = 24*60*60*1000;
 		};
 		Httpreq.send(null);
 	}
-	
+
 	//Initially loads the last 100 posts on subreddit
 	function requestSubredditData(after = null) {
 		var url = 'https://www.reddit.com/r/amphibia/new.json?limit=100';
 		GetThen(after ? url + '&after=' + after : url, checkSubreddit);
 	}
-		
+	
 	//looks at the loaded posts, this runs four times every half-second
 	function checkSubreddit(response){
 		var subbredditJSON = JSON.parse(response);
@@ -59,7 +59,7 @@ var oneDay = 24*60*60*1000;
 			document.getElementById("moreorless").innerHTML = "to count less precisely instead.";
 		};
 	};
-	 
+
 	function timer(updown, zeroTime, id){
 		if (!zeroTime) {
 			return null;
@@ -68,34 +68,34 @@ var oneDay = 24*60*60*1000;
 		var timeNow = new Date();
 		if (updown == "up"){
 			var diffDays = (timeNow.getTime() - zeroTime.getTime()) / oneDay;
-			}
+		}
 		else if (updown == "down"){
 			var diffDays = (zeroTime.getTime() - timeNow.getTime()) / oneDay;
 		}
-		
+
 		var diffHours = (diffDays - Math.floor(diffDays)) * 24;
 		var diffMinutes = (diffHours - Math.floor(diffHours)) * 60;
 		var diffSeconds = (diffMinutes - Math.floor(diffMinutes)) * 60;
-		
+
 		//Removes all decimal places in each portion
 		diffDays = Math.floor(diffDays);
 		diffHours = Math.floor(diffHours);
 		diffMinutes = Math.floor(diffMinutes);
 		diffSeconds = Math.floor(diffSeconds);
-	
+
 		if (mode == 0){
-			document.getElementById(id).innerHTML =  diffDays + "d : " + diffHours + "h : " + diffMinutes + "m : " + diffSeconds + "s";
+			document.getElementById(id).innerHTML =	diffDays + "d : " + diffHours + "h : " + diffMinutes + "m : " + diffSeconds + "s";
 			document.getElementById(id).style.fontSize = "100%";
 		}
 		else if (mode == 1){
 			if (diffDays == 1){
-				document.getElementById(id).innerHTML =  diffDays + " Day";	
+				document.getElementById(id).innerHTML =	diffDays + " Day";	
 			}
 			else if (diffDays == 0){
-				document.getElementById(id).innerHTML =  diffHours + " Hours";
+				document.getElementById(id).innerHTML =	diffHours + " Hours";
 			}
 			else {
-				document.getElementById(id).innerHTML =  diffDays + " Days";		
+				document.getElementById(id).innerHTML =	diffDays + " Days";		
 			}
 			document.getElementById(id).style.fontSize = "100%";
 		}
@@ -103,32 +103,32 @@ var oneDay = 24*60*60*1000;
 			var totalTime = diffSeconds + (diffMinutes * 60) + (diffHours * 3600) + (diffDays * 86400);
 			document.getElementById(id).innerHTML = totalTime.toLocaleString() + " Seconds";
 		};
-		
+
 		if (updown == "down" && diffDays < 0){
-			document.getElementById(id).innerHTML =  "Time's Up!";
+			document.getElementById(id).innerHTML =	"Time's Up!";
 		}
-		
+
 		return diffDays
 	};
 	
 	//The Grand Array of Hiatuses
 	var hiatusList = [
-	  ['Last Episode','Next Episode','Preceding Release','Date Announced','Following Release','Days In The Dark','Days Waiting','Hiatus Length','Note'],
-	  ['Reunion','Handy Anne','18 Jul 2019','30 Jun 2020','11 Jul 2020',348,11,359,'Break between Season 1 & 2'],
-    ['A Day at the Aquarium', 'The Shut-In!','19 Sep 2020','13 Oct 2020','17 Oct 2020',24,4,28,''],
-    ['The Shut-In!','Night Drivers','17 Oct 2020','4 Feb 2021','6 Mar 2021',110,0,0,'']
-	  ];
+		['Last Episode','Next Episode','Preceding Release','Date Announced','Following Release','Days In The Dark','Days Waiting','Hiatus Length','Note'],
+		['Reunion','Handy Anne','18 Jul 2019','30 Jun 2020','11 Jul 2020',348,11,359,'Break between Season 1 & 2'],
+		['A Day at the Aquarium', 'The Shut-In!','19 Sep 2020','13 Oct 2020','17 Oct 2020',24,4,28,''],
+		['The Shut-In!','Night Drivers','17 Oct 2020','4 Feb 2021','6 Mar 2021',110,0,0,'']
+		];
 	
 	function hiatusRankCheck(){
 		var diffDays = timer("up", latestRelease, "count");
-        var hiatusRank = 0;
-        var nextHiatusLength = hiatusList[1][7]; //reference to the longest hiatus
-        for(var i = 1; i < hiatusList.length; i++){
-            if(hiatusList[i][7] > diffDays){
+				var hiatusRank = 0;
+				var nextHiatusLength = hiatusList[1][7]; //reference to the longest hiatus
+				for(var i = 1; i < hiatusList.length; i++){
+						if(hiatusList[i][7] > diffDays){
 				hiatusRank += 1;
 				if(hiatusList[i][7] < nextHiatusLength){
-                nextHiatusLength = hiatusList[i][7];
-                }
+								nextHiatusLength = hiatusList[i][7];
+								}
 			}
 		}
 		var suffix;
@@ -146,12 +146,12 @@ var oneDay = 24*60*60*1000;
 			}
 			else suffix = "th";
 		if(hiatusRank > 0){
-			document.getElementById("hiatusRank").innerHTML =  hiatusRank + suffix;
+			document.getElementById("hiatusRank").innerHTML =	hiatusRank + suffix;
 			}
 		else{
-			document.getElementById("hiatusRank").innerHTML =  suffix;
+			document.getElementById("hiatusRank").innerHTML =	suffix;
 			}
-		document.getElementById("nextHiatusLength").innerHTML =  nextHiatusLength;
+		document.getElementById("nextHiatusLength").innerHTML =	nextHiatusLength;
 		var nextHiatusLengthDate = new Date(latestRelease.getTime() + (nextHiatusLength * 86400000));
 		return nextHiatusLengthDate;
 	}
@@ -160,7 +160,7 @@ var oneDay = 24*60*60*1000;
 	function createTable(array) {
 		var diffDays = timer("up", latestRelease, "count");
 		array[array.length - 1][5] = diffDays;
-	  array[array.length - 1][6] = diffDays - 110; //Comment out when no new episode date. Subtract by days in dark
+		array[array.length - 1][6] = diffDays - 110; //Comment out when no new episode date. Subtract by days in dark
 		array[array.length - 1][7] = diffDays;
 		for(var i = 0; i < array.length ; i++){
 			var row = document.createElement('tr');
