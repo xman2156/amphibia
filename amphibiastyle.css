@@ -88,7 +88,10 @@ td {
 	padding: 4px;
   background-color: rgba(0,0,0,0.4);
 }
-
+#changeCount:hover {
+  color: #27f7a7;
+  cursor: pointer;
+}
 .links {
   text-decoration: none;
 	color: #29b7ed;
