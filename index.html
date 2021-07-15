@@ -1,10 +1,11 @@
 <html lang="en">
   <head>
-    <title>The Silence of Anne - Amphibia Hiatus Tracker</title>
+    <title>The Silence of Wartwood - Amphibia Hiatus Tracker</title>
     <script type="text/javascript" src="amphibiascript.js"></script>
-    <meta name="description" content="A site dedicated to keeping track of the ongoing hiatus of the Disney Channel show, Amphibia as well as keeping a list of its hiatuses of varying lengths and frequency." />
+    <link rel="stylesheet" type="text/css" href="amphibiastyle.css">
+    <meta name="description" content="A site dedicated to keeping track of the ongoing hiatus of the Disney Channel show,
+     Amphibia as well as keeping a list of its hiatuses of varying lengths and frequency." />
     <meta name="theme-color" content="#ffffff">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="AmphibiaIcon.ico" type="image/x-icon"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -15,7 +16,6 @@
       gtag('js', new Date());
       gtag('config', 'G-KT6ZP4MHD4');
     </script>
-    <link rel="stylesheet" type="text/css" href="amphibiastyle.css">
   </head>
   
   <body onload="createTable(hiatusList); requestSubredditData();">
@@ -23,48 +23,55 @@
       <a href="https://xman2156.github.io/TOH/">The Owl House</a>
       <a class = "active" href="https://xman2156.github.io/amphibia/">Amphibia</a>
     </div>
+
     <div class="count">
       <h1>It has been</h1>
       <h1 style="font-size:600%">
       <span id="count">xxx</span></h1>
       <h1>since "True Colors" aired</h1>
     </div>
+
     <div class="tab">
       <p style="font-size:150%">
         <!--Note: Amphibia is currently not on hiatus.<br>-->
         <a onclick=switchMode() id="changeCount"> Click here <span id="moreorless">to count less precisely.</span></a>
       </p>
-    <hr>
-    <div class="list">
-      <h1> The Grand List of Hiatuses </h1>
-      <table align="center" id="hiatus">
-      </table>
+      <hr>
+      <div class="list">
+        <h1> The Grand List of Hiatuses </h1>
+        <table align="center" id="hiatus"></table>
+        <br> 
+        <div class= "reddit">
+          Also, it has been <span id="count3"></span> since <a target="_blank" rel="noopener noreferrer" id="hiatusLink" href=""> the Last Mention Of The Hiatus</a><br> on /r/amphibia.
+        </div>
+      </div>
       <br>
-      <div class= "reddit">
-        Also, it has been <span id="count3"></span> since <a target="_blank" rel="noopener noreferrer" id="hiatusLink" href=""> the Last Mention Of The Hiatus</a><br> on /r/amphibia.
+      <hr>
+  
+      <div class="countdowns">
+        <h2>Time To Next Release<br>Season 3</h2>
+        <h1 style="font-size:250%">    
+        <span id="count4">Unknown</span></h1>
+        <hr>
+    
+        <h2>Time To Length of <span id="hiatusRank">nth</span> Longest Hiatus<br>(Currently Stands At <span id="nextHiatusLength">n</span> Days)</h2>
+        <h1 style="font-size:250%">
+        <span id="count2">Unknown</span></h1>
+        <hr>
+      </div>
+
+      <div class="trailers">
+        <h2>Watch the Season 3 Opening</h2>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RonyPfzCIdY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <hr>
+      </div>
+
+      <div class="link">
+        <h3>
+          You can find me on<a class="links" target="_blank" href="https://github.com/xman2156"> GitHub</a><br>
+        </h3>
+        <br>
       </div>
     </div>
-    <br>
-    <hr>
-  
-    <div class="countdowns">
-      <h2>Time To Next Release<br><a>Season 3</h2></a>
-      <h1 style="font-size:250%">    
-      <span id="count4">Unknown</span></h1>
-      <hr>
-    
-      <h2>Time To Length of <span id="hiatusRank">nth</span> Longest Hiatus<br>(Currently Stands At <span id="nextHiatusLength">n</span> Days)</h2>
-      <h1 style="font-size:250%">
-      <span id="count2">Unknown</span></h1>
-    <hr>
-    </div>
-    <div class="link">
-      <h3>
-        You can find me on<a class="links" target="_blank" href="https://github.com/xman2156"> GitHub</a><br>
-        <p></p>
-      </h3>
-    </div>
-  </div>
-  <br><br>
   </body>
 </html>
