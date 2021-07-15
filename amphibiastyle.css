@@ -26,6 +26,7 @@ div {
 	font-family: "Andika";
 	text-align: center;
 	color: #3cd8ff;
+  line-height: 1.4;
 }
 
 hr {
@@ -44,10 +45,9 @@ hr {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 100%;
+	width: 90%;
 	color: #3cd8ff;
   letter-spacing: 3px;
-  text-shadow: 2px 2px #000000;
 }
 
 .head {
@@ -56,16 +56,11 @@ hr {
 
 .tab {
 	position: relative;
-	transform: translate(0%, 90%);
+	transform: translate(0%, 110%);
 	font-size: 100%;
 	width: 100%;
   height: 100%;
-  text-shadow: 2px 2px #000000;
 }	
-
-.reddit {
-  text-shadow: none;
-}
 
 body {
 	background-color: black;
@@ -86,7 +81,7 @@ td {
 	text-align: center;
 	border: 3px solid #3cd8ff;
 	padding: 4px;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.6);
 }
 #changeCount:hover {
   color: #27f7a7;
@@ -98,11 +93,12 @@ td {
 }
 
 .links:visited {
-	color: #21cbff;
+	color: #21ffbc;
 }
 
 .links:hover {
-	color: rgb(45, 66, 255);
+	color: #2181ff;
+  cursor: pointer;
 }
 
 @font-face {
