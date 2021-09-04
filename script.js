@@ -1,6 +1,6 @@
 var oneDay = 24*60*60*1000;
 var latestRelease = new Date("2021-05-22T10:00:00"); //Newest Episode Release
-var nextRelease = new Date("2021-10-02T19:00:00-05:00"); // Next Episode release Comment out when no date
+var nextRelease = new Date("2021-09-10T20:00:00-05:00"); // Next Episode release Comment out when no date
 var mode = 0; //DD:HH:MM:SS mode is default
 var lastHiatusMention = null;
 
@@ -111,10 +111,10 @@ function timer(updown, zeroTime, id){
 //The Grand Array of Hiatuses
 var hiatusList = [
   ['Last Episode','Next Episode','Preceding Release','Date Announced','Following Release','Days In The Dark','Days Waiting','Hiatus Length','Note'],
-  ['Reunion','Handy Anne','18 Jul 2019','30 Jun 2020','11 Jul 2020',348,11,359,'S1-2 Hiatus'],
-  ['A Day at the Aquarium', 'The Shut-In!','19 Sep 2020','13 Oct 2020','17 Oct 2020',24,4,28,'Halloween Special in between S2A-2B Hiatus'],
-  ['The Shut-In!','Night Drivers','17 Oct 2020','28 Feb 2021','6 Mar 2021',110,6,116,'S2A - 2B Hiatus'],
-  ['True Colors','Season 3','22 May 2021', '24 Jul 2021', '2 Oct 2021', '63' ,'N/A',,'S2 - 3 Hiatus']
+  ['Reunion','Handy Anne','18 Jul 2019','30 Jun 2020','11 Jul 2020',348,11,359,''],
+  ['A Day at the Aquarium', 'The Shut-In!','19 Sep 2020','13 Oct 2020','17 Oct 2020',24,4,28,'Halloween Special'],
+  ['The Shut-In!','Night Drivers','17 Oct 2020','28 Feb 2021','6 Mar 2021',110,6,116,''],
+  ['True Colors','Season 3','22 May 2021', '24 Jul 2021', '10 Sep 2021', 63 ,'','','LightBox Expo Online Release']
 ];
   
 function hiatusRankCheck(){
@@ -158,8 +158,8 @@ function hiatusRankCheck(){
 function createTable(array) {
   var diffDays = timer("up", latestRelease, "count");
   //array[array.length - 1][5] = diffDays; //Comment out when not in dark
-  array[array.length - 1][6] = diffDays - 63; //Comment out when no new episode date. Subtract by days in dark
-  array[array.length - 1][7] = diffDays; //Comment out when not on hiatus
+  array[array.length - 1][6] = diffDays - 63 + " and counting"; //Comment out when no new episode date. Subtract by days in dark
+  array[array.length - 1][7] = diffDays + " and counting"; //Comment out when not on hiatus
   for(var i = 0; i < array.length ; i++){
     var row = document.createElement('tr');
     row.setAttribute("id", "myTr" + i);
