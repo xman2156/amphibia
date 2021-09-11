@@ -1,6 +1,6 @@
 var oneDay = 24*60*60*1000;
 var latestRelease = new Date("2021-05-22T10:00:00"); //Newest Episode Release
-var nextRelease = new Date("2021-09-10T20:00:00-05:00"); // Next Episode release Comment out when no date
+var nextRelease = new Date("2021-10-02T08:30:00-05:00"); // Next Episode release Comment out when no date
 var mode = 0; //DD:HH:MM:SS mode is default
 var lastHiatusMention = null;
 
@@ -114,7 +114,7 @@ var hiatusList = [
   ['Reunion','Handy Anne','18 Jul 2019','30 Jun 2020','11 Jul 2020',348,11,359,''],
   ['A Day at the Aquarium', 'The Shut-In!','19 Sep 2020','13 Oct 2020','17 Oct 2020',24,4,28,'Halloween Special'],
   ['The Shut-In!','Night Drivers','17 Oct 2020','28 Feb 2021','6 Mar 2021',110,6,116,''],
-  ['True Colors','Season 3','22 May 2021', '24 Jul 2021', '10 Sep 2021', 63 ,'','','LightBox Expo Online Release']
+  ['True Colors','Season 3','22 May 2021', '24 Jul 2021', '02 Oct 2021', 63 ,'','','LightBox Expo Online Release Cancelled']
 ];
   
 function hiatusRankCheck(){
