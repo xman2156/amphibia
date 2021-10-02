@@ -70,6 +70,13 @@ body {
 	background-position: center;
 }
 
+@media only screen and (orientation: portrait) {
+	body {
+		background-position: 78% 50%;
+    background-size: 300% 100%;
+	}
+}
+
 table {
   border-collapse: collapse;
 	color: #3cd8ff;
