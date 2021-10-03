@@ -41,7 +41,8 @@ function checkSubreddit(response){
   //loads the next 100 if hiatus is not mentioned then runs the function again
   if (lastHiatusMentionThisCheck == null) {
     requestSubredditData(subbredditJSON.data.after);
-  } else {
+  } 
+  else {
     lastHiatusMention = lastHiatusMentionThisCheck;
   }
 };
