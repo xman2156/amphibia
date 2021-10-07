@@ -11,7 +11,6 @@
 
     <script type="text/javascript" src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <script>
 	    $(window).load(function() {
 	    	$("#loader").fadeOut("slow");;
@@ -33,26 +32,20 @@
     <div id="loader"></div>
     <div style="display:none;" id="page">
       
-      <button id="infoBtn">i</button>
       <div id="info">
         <div class="info-content">
           <span class="close">&times;</span>
-          <p>Will be updated soon...</p>
+          <p>This website tracks the hiatuses of the show "Amphibia" A hiatus is a time period starting from the end 
+            of one announced schedule to the begining of another. This site is maintained by one person. 
+            <br> Some planned updates so far: <br> MANY mobile improvements</p>
         </div>
       </div>
+      <button id="infoBtn">i</button>
    
       <div class="topnav">
         <a class = "website" href="https://xman2156.github.io/TOH/">The Owl House</a>
         <a class = "active website" href="https://xman2156.github.io/amphibia/">Amphibia</a>
-        <a class = "website report" target="_blank" href="https://forms.gle/9xdBuzQwWqzUaSQJ9">Report a bug or ask a question</a>
-      </div>
-
-      <button id="infoBtn">i</button>
-      <div id="info">
-        <div class="info-content">
-          <span class="close">&times;</span>
-          <p>Will be updated soon...</p>
-        </div>
+        <a class = "report website" target="_blank" href="https://forms.gle/9xdBuzQwWqzUaSQJ9">Report a bug or ask a question</a>
       </div>
 
       <div class="count">
@@ -67,7 +60,7 @@
           Note: Amphibia is currently not on hiatus.<br>
           <a onclick=switchMode() id="changeCount"> Click here <span id="moreorless">to count less precisely.</span></a>
         </p>
-        <hr>
+        <hr class="spacer">
 
         <div class="list">
           <h1> The Grand List of Hiatuses </h1>
@@ -78,31 +71,29 @@
           </div>
         </div>
         <br>
-        <hr>
+        <hr class="spacer">
   
         <div class="countdowns">
           <h2>Time To Next Release<br>"Hop 'Til You Drop; Turning Point"</h2>
           <h1 style="font-size:250%">    
             <span id="count4">Unknown</span>
           </h1>
-          <hr>
+          <hr class="spacer">
     
           <h2>Time To Length of <span id="hiatusRank">nth</span> Longest Hiatus<br>(Currently Stands At <span id="nextHiatusLength">n</span> Days)</h2>
           <h1 style="font-size:250%">
             <span id="count2">Unknown</span>
           </h1>
-          <hr>
+          <hr class="spacer">
         </div>
 
         <div class="trailers">
           <h2>Watch the Season 3 Trailer</h2>
-          <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/YwWBa3L7lSo"
-            loading="lazy" 
-            title="YouTube video player">
-          </iframe>
-          <hr>
+          <div id="youtube">
+            <div class="play-button"></div>
+          </div>
         </div>
+        <hr class="spacer">
 
         <div class="link">
           <h3>
@@ -113,25 +104,7 @@
         </div>
       </div>
     </div>
+    <script src="modal.js"></script>
+    <script src="youtube.js"></script>
   </body>
 </html>
-
-<script>
-  var modal = document.getElementById("info");
-  var btn = document.getElementById("infoBtn");
-  var span = document.getElementsByClassName("close")[0];
-
-  btn.onclick = function() {
-    modal.style.display = "block";
-  }
-
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-</script>

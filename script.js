@@ -158,8 +158,8 @@ function hiatusRankCheck(){
 //makes an HTML table from the array
 function createTable(array) {
   var diffDays = timer("up", latestRelease, "count");
-  //array[array.length - 1][5] = diffDays; //Comment out when not in dark
-  //array[array.length - 1][6] = diffDays - 63 + " and counting"; //Comment out when no new episode date. Subtract by days in dark
+  //array[array.length - 1][5] = diffDays + " and counting"; //Comment out when out of the dark
+  //array[array.length - 1][6] = diffDays - 63 + " and counting"; //Comment out when no new episode date. Subtract by days in the dark
   //array[array.length - 1][7] = diffDays + " and counting"; //Comment out when not on hiatus
   for(var i = 0; i < array.length ; i++){
     var row = document.createElement('tr');
@@ -179,7 +179,7 @@ window.setInterval(function(){
   timer("up", latestRelease, "count");
   timer("down", hiatusRankCheck(), "count2");
   timer("up", lastHiatusMention, "count3");
-  timer("down", nextRelease, "count4");
+  timer("down", nextRelease, "count4"); //Comment out when no new release date
 }, 250);
   
 //every 30 seconds, the most recent 100 posts on the subreddit are loaded up again in case there has been a new post that mentions hiatus
