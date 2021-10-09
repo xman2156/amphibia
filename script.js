@@ -1,6 +1,6 @@
 var oneDay = 24*60*60*1000;
-var latestRelease = new Date("2021-10-02T09:30:00-04:00"); //Newest Episode Release
-var nextRelease = new Date("2021-10-09T09:30:00-04:00"); // Next Episode release Comment out when no date
+var latestRelease = new Date("2021-10-09T09:30:00-04:00"); //Newest Episode Release
+var nextRelease = new Date("2021-10-16T09:30:00-04:00"); // Next Episode release Comment out when no date
 var mode = 0; //DD:HH:MM:SS mode is default
 var lastHiatusMention = null;
 
