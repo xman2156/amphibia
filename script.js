@@ -115,7 +115,8 @@ var hiatusList = [
   ['Reunion','Handy Anne','18 Jul 2019','30 Jun 2020','11 Jul 2020',348,11,359,''],
   ['A Day at the Aquarium', 'The Shut-In!','19 Sep 2020','13 Oct 2020','17 Oct 2020',24,4,28,'Halloween Special'],
   ['The Shut-In!','Night Drivers','17 Oct 2020','28 Feb 2021','6 Mar 2021',110,6,116,''],
-  ['True Colors','The New Normal','22 May 2021', '24 Jul 2021', '02 Oct 2021', 63 , 70 , 133 ,'LightBox Expo Online Release Cancelled']
+  ['True Colors','The New Normal','22 May 2021', '24 Jul 2021', '02 Oct 2021', 63 , 70 , 133 ,'LightBox Expo Online Release Cancelled'],
+  ['Froggy Little Christmas','???','27 Nov 2021','???','???','???','???','???','This hiatus has not started']
 ];
   
 function hiatusRankCheck(){
