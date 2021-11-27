@@ -1,6 +1,6 @@
 var oneDay = 24*60*60*1000;
-var latestRelease = new Date("2021-11-20T09:30:00-06:00"); //Newest Episode Release
-var nextRelease = new Date("2021-11-27T09:30:00-06:00"); // Next Episode release Comment out when no date
+var latestRelease = new Date("2021-11-27T09:30:00-06:00"); //Newest Episode Release
+//var nextRelease = new Date("2021-11-27T09:30:00-06:00"); // Next Episode release Comment out when no date
 var mode = 0; //DD:HH:MM:SS mode is default
 var lastHiatusMention = null;
 
@@ -116,7 +116,7 @@ var hiatusList = [
   ['A Day at the Aquarium', 'The Shut-In!','19 Sep 2020','13 Oct 2020','17 Oct 2020',24,4,28,'Halloween Special'],
   ['The Shut-In!','Night Drivers','17 Oct 2020','28 Feb 2021','6 Mar 2021',110,6,116,''],
   ['True Colors','The New Normal','22 May 2021', '24 Jul 2021', '02 Oct 2021', 63 , 70 , 133 ,'LightBox Expo Online Release Cancelled'],
-  ['Froggy Little Christmas','???','27 Nov 2021','???','???','???','???','???','This hiatus has not started']
+  ['Froggy Little Christmas','???','27 Nov 2021','???','???','???','???','???','']
 ];
   
 function hiatusRankCheck(){
@@ -161,7 +161,7 @@ function createTable(array) {
   var diffDays = timer("up", latestRelease, "count");
   //array[array.length - 1][5] = diffDays + " and counting"; //Comment out when out of the dark
   //array[array.length - 1][6] = diffDays - 63 + " and counting"; //Comment out when no new episode date. Subtract by days in the dark
-  //array[array.length - 1][7] = diffDays + " and counting"; //Comment out when not on hiatus
+  array[array.length - 1][7] = diffDays + " and counting"; //Comment out when not on hiatus
   for(var i = 0; i < array.length ; i++){
     var row = document.createElement('tr');
     row.setAttribute("id", "myTr" + i);
