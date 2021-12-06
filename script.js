@@ -180,7 +180,7 @@ window.setInterval(function(){
   timer("up", latestRelease, "count");
   timer("down", hiatusRankCheck(), "count2");
   timer("up", lastHiatusMention, "count3");
-  timer("down", nextRelease, "count4"); //Comment out when no new release date
+  timer("down", nextRelease, "count4");
 }, 250);
   
 //every 30 seconds, the most recent 100 posts on the subreddit are loaded up again in case there has been a new post that mentions hiatus
