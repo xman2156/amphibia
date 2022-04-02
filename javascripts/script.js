@@ -1,13 +1,13 @@
 //Automatic episode change
 var episodeList = [
-  ['Commander Anne; Sprivy',"Sasha's Angels; Olm Town Road",new Date("2022-03-26T10:00:00-06:00"),new Date("2022-04-02T10:00:00-06:00")],
-  ["Sasha's Angels; Olm Town Road","Mother of Olms; Grime's Pupil",new Date("2022-04-02T10:00:00-06:00"),new Date("2022-04-09T10:00:00-06:00")],
-  ["Mother of Olms; Grime's Pupil", 'The Root of Evil; The Core & The King', new Date("2022-04-09T10:00:00-06:00"), new Date("2022-04-16T10:00:00-06:00")],
-  ['The Root of Evil; The Core & The King', 'Newts in Tights; Fight or Flight', new Date("2022-04-16T10:00:00-06:00"), new Date("2022-04-23T10:00:00-06:00")],
-  ['Newts in Tights; Fight or Flight', 'The Three Armies; The Beginning of the End', new Date("2022-04-23T10:00:00-06:00"), new Date("2022-04-30T10:00:00-06:00")],
-  ['The Three Armies; The Beginning of the End', '???', new Date("2022-04-30T10:00:00-06:00"), new Date("2022-05-07T10:00:00-06:00")],
+  ['Commander Anne; Sprivy',"Sasha's Angels; Olm Town Road",new Date("2022-03-26T09:30:00-05:00"),new Date("2022-04-02T09:30:00-05:00")],
+  ["Sasha's Angels; Olm Town Road","Mother of Olms; Grime's Pupil",new Date("2022-04-02T09:30:00-05:00"),new Date("2022-04-09T09:30:00-05:00")],
+  ["Mother of Olms; Grime's Pupil", 'The Root of Evil; The Core & The King', new Date("2022-04-09T09:30:00-05:00"), new Date("2022-04-16T09:30:00-05:00")],
+  ['The Root of Evil; The Core & The King', 'Newts in Tights; Fight or Flight', new Date("2022-04-16T09:30:00-05:00"), new Date("2022-04-23T09:30:00-05:00")],
+  ['Newts in Tights; Fight or Flight', 'The Three Armies; The Beginning of the End', new Date("2022-04-23T09:30:00-05:00"), new Date("2022-04-30T09:30:00-05:00")],
+  ['The Three Armies; The Beginning of the End', '???', new Date("2022-04-30T09:30:00-05:00"), new Date("2022-05-07T09:30:00-05:00")],
 ];
-var startDate = new Date("2022-03-26T10:00:00-06:00");
+var startDate = new Date("2022-03-26T09:30:00-05:00");
 var today = Date.now();
 var weeksPassed = Math.floor((today - Date.parse(startDate))/(24*3600*1000*7));
 var latestRelease = episodeList[weeksPassed][2];
