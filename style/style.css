@@ -143,12 +143,19 @@ body {
   border-bottom: 3px solid #3cd8ff;
 }
 
-.count {
-	position: absolute;
-	top: 50%;
+.finalcount {
+  position: absolute;
+	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 90%;
+	letter-spacing: 3px;
+}
+
+.count {
+	position: relative;
+	transform: translate(0%, 250%);
+	width: 100%;
 	letter-spacing: 3px;
 }
 
@@ -166,7 +173,7 @@ hr {
 
 .tab {
 	position: relative;
-	transform: translate(0%, 110%);
+	transform: translate(0%, 120%);
 	font-size: 100%;
 	width: 100%;
 	height: 100%;
