@@ -23,7 +23,7 @@ function requestSubredditData(after = null) {
   GetThen(after ? url + '&after=' + after : url, checkSubreddit);
 }
   
-//looks at the loaded posts, this runs four times every half-second
+/* //looks at the loaded posts, this runs four times every half-second
 function checkSubreddit(response){
   var subbredditJSON = JSON.parse(response);
   var lastHiatusMentionThisCheck;
@@ -46,7 +46,7 @@ function checkSubreddit(response){
   else {
     lastHiatusMention = lastHiatusMentionThisCheck;
   }
-};
+}; */
 
 function switchMode(){
   if(mode == 0){
