@@ -11,7 +11,7 @@ youtube.addEventListener( "click", function() {
 	var iframe = document.createElement( "iframe" );
 	iframe.setAttribute("frameborder", "0");
 	iframe.setAttribute("allowfullscreen", "");
-	iframe.setAttribute("src", "https://www.youtube.com/embed/CGw1RYr0Cxs?autoplay=1");
+	iframe.setAttribute("src", "https://www.youtube.com/embed/6auS7O8CmD8?autoplay=1");
 	this.innerHTML = "";
 	this.appendChild(iframe);
 });	
