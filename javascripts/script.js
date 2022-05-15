@@ -69,7 +69,7 @@ function timer(updown, zeroTime, id){
 var hiatusList = [
   ['Last Episode','Next Episode','Preceding Release','Following Release','Hiatus Length','Note'],
   ['Reunion','Handy Anne','Jul 18 2019','Jul 11 2020',359,''],
-  ['A Day at the Aquarium', 'The Shut-In!','Sep 19 2020','Oct 17 2020',28,'One episode break for Halloween Special'],
+  ['A Day at the Aquarium', 'The Shut-In!','Sep 19 2020','Oct 17 2020',28,'One Episode Break For Halloween Special'],
   ['The Shut-In!','Night Drivers','Oct 17 2020','Mar 6 2021',116,''],
   ['True Colors','The New Normal','May 22 2021','Oct 2 2021',133,'LightBox Expo Online Release Cancelled'],
   ['Froggy Little Christmas','Escape to Amphibia','Nov 27 2021','Mar 19 2022',112,''],
