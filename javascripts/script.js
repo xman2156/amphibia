@@ -45,13 +45,13 @@ function timer(updown, zeroTime, id){
   }
   else if (mode == 1){
     if (diffDays == 1){
-      document.getElementById(id).innerHTML =  diffDays + " Day";  
+      document.getElementById(id).innerHTML =  diffDays + " Day";
     }
     else if (diffDays == 0){
       document.getElementById(id).innerHTML =  diffHours + " Hours";
     }
     else {
-      document.getElementById(id).innerHTML =  diffDays + " Days";    
+      document.getElementById(id).innerHTML =  diffDays + " Days";
     }
     document.getElementById(id).style.fontSize = "100%";
   }
@@ -64,7 +64,7 @@ function timer(updown, zeroTime, id){
   }
   return diffDays
 };
-  
+
 //The Grand Array of Hiatuses
 var hiatusList = [
   ['Last Episode','Next Episode','Preceding Release','Following Release','Hiatus Length','Note'],
@@ -75,11 +75,11 @@ var hiatusList = [
   ['Froggy Little Christmas','Escape to Amphibia','Nov 27 2021','Mar 19 2022',112,''],
   ['The Hardest Thing','','May 14 2022','',,'The End Of Amphibia']
 ];
-  
+
 //makes an HTML table from the array
 function createTable(array) {
   var diffDays = timer("up", latestRelease, "count");
-  array[array.length - 1][4] = diffDays + " days and counting";
+  array[array.length - 1][4] = diffDays + " days and counting"; //comment out when not on hiatus
   for(var i = 0; i < array.length ; i++){
     var row = document.createElement('tr');
     row.setAttribute("id", "myTr" + i);
@@ -92,7 +92,7 @@ function createTable(array) {
     };
   };
 };
-  
+
 //does the ticking
 window.setInterval(function(){
   timer("up", latestRelease, "count");
