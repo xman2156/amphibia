@@ -9,10 +9,19 @@
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="icon" href="images/icon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+
     <script src="javascripts/script.js" defer></script>
     <script src="javascripts/modal.js" defer></script>
     <script src="javascripts/youtube.js" defer></script>
-    <script src="javascripts/jquery-3.6.0.min.js"></script>
+    <script src="javascripts/navbar.js" defer></script>
+    <script src="javascripts/cookies.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-messaging.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script type="module" src="/pwabuilder-sw-register.js"></script>
+
     <script>
 	    $(window).on("load", function() {
 	    	$("#loader").fadeOut("slow");;
@@ -30,7 +39,7 @@
     </script>
   </head>
 
-  <body onload="createTable(hiatusList);">
+  <body onload="createTable(hiatusList); checkCookie();">
     <div id="loader"></div>
     <div style="display:none;" id="page">
       <div id="info">
@@ -45,31 +54,33 @@
       </div>
       <button id="infoBtn">i</button>
 
-      <div class="topnav">
+      <div class="topnav" id="myTopnav">
+        <a class = "active website" href="https://xman2156.github.io/amphibia/">Amphibia</a>
         <a class = "website" href="https://xman2156.github.io/TOH/">The Owl House</a>
         <a class = "website" href="https://xman2156.github.io/arcane/">Arcane</a>
         <a class = "website" href="https://xman2156.github.io/atla/">ATLA</a>
         <a class = "website" href="https://xman2156.github.io/miraculous/">Miraculous</a>
         <a class = "website" href="https://xman2156.github.io/tgamm/">Molly McGee</a>
         <a class = "website" href="https://xman2156.github.io/bcg/">Big City Greens</a>
-        <div class= "active dropdown">
+        <div class= "dropdown">
           <button class="dropbtn">The Graveyard
             <i class="fa-solid fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a class = "active" href="https://xman2156.github.io/amphibia/">Amphibia</a>
             <a href="https://xman2156.github.io/spop/">She-Ra</a>
             <a href="https://xman2156.github.io/infinitytrain/">Infinity Train</a>
           </div>
         </div>
+        <button id="navBtn" class="icon">
+          <i id="navIcon" class="fa-solid fa-bars"></i>
+        </button>
         <a class = "report website" target="_blank" href="https://forms.gle/9xdBuzQwWqzUaSQJ9">Report a bug or ask a question</a>
       </div>
 
-      <div class="alert">
+      <div class="alert" id="alert">
         <span class="closebtn">&times;</span>
-        <strong>INFO!</strong> I recently started 
-        <a target="_blank" href="https://twitter.com/AnimationHiatus">a Twitter page</a> 
-        to share updates about the sites and new projects.
+        <strong>INFO!</strong> You can now download the site as a web app and get
+        notifications about new release dates. <a target="_blank" href="../xman2156.github.io">Find out more here.</a>
       </div>
 
       <div class="count">
@@ -113,13 +124,19 @@
         </div>
       </div>
     </div>
+
     <script>
       var close = document.getElementsByClassName("closebtn");
         close[0].onclick = function(){
+          function createCookie() {
+            var date = new Date();
+            date.setTime(date.getTime()+(days*30*24*60*60*1000));
+            document.cookie = "closePopup=true; expires="+date.toGMTString();
+          }
           var div = this.parentElement;
           div.style.opacity = "0";
           setTimeout(function(){ div.style.display = "none"; }, 600);
-        }
+        };
     </script>
   </body>
 </html>
