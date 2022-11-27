@@ -6,7 +6,7 @@ body {
 	background-size: cover;
   background-color: #4d4c48;
   color: #3cd8ff;
-  font-family: "Nunito";
+  font-family: "Amphibia";
   text-align: center;
   line-height: 1.4;
 }
@@ -229,6 +229,7 @@ body {
     text-align: left;
   }
 }
+
 /* alert */
 .alert {
   padding: 20px;
@@ -385,6 +386,13 @@ body.info-open #page {
 @font-face {
   font-family: Nunito;
   src: url('/Nunito-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Amphibia;
+  src: url('/Amphibia Logo Regular 700.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
