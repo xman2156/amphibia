@@ -73,7 +73,7 @@ var hiatusList = [
   ['The Shut-In!','Night Drivers','Oct 17 2020','Mar 6 2021',116,''],
   ['True Colors','The New Normal','May 22 2021','Oct 2 2021',133,'LightBox Expo Online Release Cancelled'],
   ['Froggy Little Christmas','Escape to Amphibia','Nov 27 2021','Mar 19 2022',112,''],
-  ['The Hardest Thing','','May 14 2022','',,'The End Of Amphibia']
+  ['The Hardest Thing','','May 14 2022','',,'The end Of Amphibia']
 ];
 
 //makes an HTML table from the array
